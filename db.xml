@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="resourcelibrary_types">
+		<field name="id" type="I"><UNSIGNED/><KEY/><AUTOINCREMENT/></field>
+		<field name="typeName" type="C" size="255"></field>
+		<field name="typeDefault" type="I"></field>
+	</table>
+	<table name="resourcelibrary_topics">
+		<field name="id" type="I"><UNSIGNED/><KEY/><AUTOINCREMENT/></field>
+		<field name="topicName" type="C" size="255"></field>
+	</table>
+	<table name="resourcelibrary_subtopics">
+		<field name="id" type="I"><UNSIGNED/><KEY/><AUTOINCREMENT/></field>
+		<field name="subTopicName" type="C" size="255"></field>
+		<field name="topicId" type="I"></field>
+	</table>
+	<table name="resourcelibrary_assets">
+		<field name="id" type="I"><UNSIGNED/><KEY/><AUTOINCREMENT/></field>
+		<field name="fileName" type="C" size="255"></field>
+		<field name="fileType" type="C" size="255"></field>
+	</table>
+	<table name="resourcelibrary_thumbnails">
+		<field name="id" type="I"><UNSIGNED/><KEY/><AUTOINCREMENT/></field>
+		<field name="fileName" type="C" size="255"></field>
+		<field name="fileType" type="C" size="255"></field>
+	</table>
+	<table name="resourcelibrary_resource">
+		<field name="id" type="I"><UNSIGNED/><KEY/><AUTOINCREMENT/></field>
+		<field name="resourceName" type="C" size="255"></field>
+		<field name="resourceSeoTitle" type="C" size="255"></field>
+		<field name="resourceSeoDescription" type="X"></field>
+		<field name="resourceCtaButton" type="C" size="255"></field>
+		<field name="resourceType" type="I"></field>
+		<field name="resourceCid" type="I"></field>
+		<field name="resourceTopics" type="C" size="255"></field>
+		<field name="resourceSubTopics" type="C" size="255"></field>
+		<field name="resourceAreas" type="C" size="255"></field>
+		<field name="resourceExperts" type="C" size="255"></field>
+		<field name="resourceAsset" type="I"></field>
+		<field name="resourceThumbnail" type="I"></field>
+		<field name="resourceContent" type="X"></field>
+		<field name="resourceGated" type="I"></field>
+		<field name="resourceDescription" type="X"></field>
+		<field name="resourceGatedContent" type="X"></field>
+		<field name="resourceGatedFormTitle" type="C" size="255"></field>
+		<field name="resourceGatedFormCopy" type="X"></field>
+		<field name="resourceGatedFormCtaTitle" type="C" size="255"></field>
+		<field name="resourceGatedFormImage" type="I"></field>
+		<field name="resourceGatedFormId" type="C" size="255"></field>
+		<field name="resourceGatedFormPardotName" type="C" size="255"></field>
+		<field name="resourceActive" type="I"></field>
+		<field name="resourcePageType" type="I"></field>
+		<field name="resourceUrl" type="C" size="255"></field>
+		<field name="resourceSlug" type="C" size="255"></field>
+		<field name="resourceCreated" type="C" size="255"></field>
+		<field name="resourceModified" type="C" size="255"></field>
+		<field name="resourceAuthor" type="X"></field>
+		<field name="resourceMediaLink" type="X"></field>
+		<field name="resourceVideoTranscript" type="X"></field>
+		<field name="resourceIsFeatured" type="I"></field>
+		<field name="resourceCanonicalUrl" type="X"></field>
+		<field name="customAuthorName" type="C" size="255"></field>
+		<field name="customAuthorTitle" type="C" size="255"></field>
+		<field name="customAuthorThumbnailPath" type="C" size="255"></field>
+		<field name="customAuthorUrl" type="C" size="255"></field>
+		<field name="resourceCustomRelated" type="C" size="255"></field>
+	</table>
+	<table name="resourcelibrary_featured">
+		<field name="id" type="I"><UNSIGNED/><KEY/><AUTOINCREMENT/></field>
+		<field name="resourceFeatured1" type="X"></field>
+		<field name="resourceFeatured2" type="X"></field>
+		<field name="resourceFeatured3" type="X"></field>
+		<field name="resourceFeatured4" type="X"></field>
+		<field name="resourceFeatured5" type="X"></field>
+		<field name="resourceFeatured6" type="X"></field>
+		<field name="resourceFeatured7" type="X"></field>
+		<field name="resourceFeatured8" type="X"></field>
+		<field name="resourceFeatured9" type="X"></field>
+		<field name="resourceFeatured10" type="X"></field>
+		<field name="resourceFeatured11" type="X"></field>
+		<field name="resourceFeatured12" type="X"></field>
+	</table>
+	<sql>
+		<query>INSERT INTO resourcelibrary_types (typeName, typeDefault) VALUES ('Blog', 1)</query>
+		<query>INSERT INTO resourcelibrary_types (typeName, typeDefault) VALUES ('Podcast', 1)</query>
+		<query>INSERT INTO resourcelibrary_types (typeName, typeDefault) VALUES ('Video', 1)</query>
+		<query>INSERT INTO resourcelibrary_types (typeName, typeDefault) VALUES ('Article', 1)</query>
+		<query>INSERT INTO resourcelibrary_types (typeName, typeDefault) VALUES ('Whitepaper', 1)</query>
+		<query>INSERT INTO resourcelibrary_types (typeName, typeDefault) VALUES ('Case Study', 1)</query>
+		<query>INSERT INTO resourcelibrary_types (typeName, typeDefault) VALUES ('Factsheet', 1)</query>
+		<query>INSERT INTO resourcelibrary_types (typeName, typeDefault) VALUES ('Brochure', 1)</query>
+	</sql>
+</schema>
